@@ -50,5 +50,4 @@ jobs:
 
       - name: Execute Migrate Laravel
         run: |
-          sshpass -p ${{ secrets.SFTP_PASSWORD }} ssh ${{ secrets.SFTP_USERNAME }}@${{ secrets.SFTP_SERVER }} 'cd /var/www/julio
-          && ls -la'
+          sshpass -p ${{ secrets.SFTP_PASSWORD }} ssh ${{ secrets.SFTP_USERNAME }}@${{ secrets.SFTP_SERVER }} 'cd /var/www/julio && php -r "file_exists('.env') || copy('.env.example', '.env') && echo "APP_ENV=production" >> .env && echo "APP_DEBUG=false" >> .env && php artisan key:generate && php artisan cache:clear && php artisan config:cache'
