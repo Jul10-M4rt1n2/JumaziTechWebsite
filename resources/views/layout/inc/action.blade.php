@@ -12,6 +12,6 @@
 
         <p>Júlio Martins</p>
 
-        <p>Programador PHP Laravel Jr</p>
+        <p>Programador PHP Laravel</p>
     </div>
 </section>
