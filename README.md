@@ -1,66 +1,103 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Jumazi Tech Website
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Site institucional da Jumazi Tech - Desenvolvimento de soluções web com Laravel.
 
-## About Laravel
+## 🌐 Acesso ao Site
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### GitHub Pages (Versão Estática)
+O site está disponível gratuitamente no GitHub Pages:
+- **URL**: https://jul10-m4rt1n2.github.io/JumaziTechWebsite/
+- **Status**: ✅ Hospedagem gratuita
+- **Limitação**: Formulário de contato desabilitado (apenas conteúdo estático)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Servidor de Produção (Versão Completa)
+Versão completa com backend Laravel e formulário funcional hospedada em servidor SFTP privado.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 📋 Como Publicar no GitHub Pages
 
-## Learning Laravel
+Para publicar ou atualizar o site no GitHub Pages, siga as instruções detalhadas no arquivo:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+**👉 [DEPLOY_GITHUB_PAGES.md](./DEPLOY_GITHUB_PAGES.md)**
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### Resumo Rápido:
+1. Vá para **Settings > Pages** no GitHub
+2. Em **Source**, selecione **GitHub Actions**
+3. Faça push para a branch `main` ou execute o workflow manualmente
+4. Aguarde o deploy completar (2-3 minutos)
+5. Acesse: https://jul10-m4rt1n2.github.io/JumaziTechWebsite/
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 🛠️ Tecnologias
 
-## Laravel Sponsors
+- **Framework**: Laravel 10
+- **Frontend**: Bootstrap 5, HTML5, CSS3, JavaScript
+- **Hospedagem**: GitHub Pages (estático) + Servidor SFTP (dinâmico)
+- **CI/CD**: GitHub Actions
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## 📁 Estrutura do Projeto
 
-### Premium Partners
+```
+.
+├── public/              # Assets públicos e index.html estático
+│   ├── index.html      # Versão estática para GitHub Pages
+│   ├── css/            # Estilos
+│   ├── js/             # Scripts
+│   └── assets/         # Imagens e recursos
+├── resources/          # Views e templates Laravel
+│   └── views/          # Templates Blade
+├── .github/
+│   └── workflows/
+│       ├── github-pages.yml  # Deploy para GitHub Pages
+│       └── main.yaml         # Deploy para servidor SFTP
+└── DEPLOY_GITHUB_PAGES.md    # Guia de deployment
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+## 🚀 Deploy Automático
 
-## Contributing
+O projeto possui dois workflows de deployment:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+1. **GitHub Pages** (`.github/workflows/github-pages.yml`)
+   - Acionado: Push para `main`/`master` ou manualmente
+   - Destino: GitHub Pages
+   - Conteúdo: Versão estática (`public/`)
 
-## Code of Conduct
+2. **Servidor SFTP** (`.github/workflows/main.yaml`)
+   - Acionado: Push para `master`
+   - Destino: Servidor privado
+   - Conteúdo: Aplicação Laravel completa
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 📞 Contato
 
-## Security Vulnerabilities
+**Júlio Martins**  
+Programador PHP Laravel  
+Telefone: +55 (065) 9 99232-5386
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 🔧 Desenvolvimento Local
 
-## License
+Para rodar o projeto localmente:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```bash
+# Clonar o repositório
+git clone https://github.com/Jul10-M4rt1n2/JumaziTechWebsite.git
+cd JumaziTechWebsite
+
+# Instalar dependências
+composer install
+npm install
+
+# Configurar ambiente
+cp .env.example .env
+php artisan key:generate
+
+# Rodar o servidor
+php artisan serve
+```
+
+Acesse: http://localhost:8000
+
+## 📝 Licença
+
+Este projeto é de propriedade da Jumazi Tech.
+
+---
+
+<p align="center">Desenvolvido com ❤️ por Jumazi Tech</p>
